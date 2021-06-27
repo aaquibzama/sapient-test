@@ -1,0 +1,24 @@
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+  servlet:
+    context-path: /league
+  port: 8080
+  basedir: tomcat
+  accesslog:
+    directory: logs
+    enabled: true
+
+league:
+  api:
+    url: https://apiv3.apifootball.com/
+    apiKey: 9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978
+    endpoints:
+      countries: get_countries
+      competitions: get_leagues
+      teams: get_teams
+      players: get_players
+      standings: get_standings
+      events: get_events
+    timeout: 30000
